@@ -28,6 +28,12 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>We need camera for making good meme.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>We need library for making good meme.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need access to photo library for make a meme</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
