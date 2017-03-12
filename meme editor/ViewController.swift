@@ -20,7 +20,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    //MARK: Photo library imlimatation
+    
+    override func viewWillAppear(_ animated: Bool) {
+        cameraBtmOutlet.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+    }
+    
+    //MARK: Photo/Camera library imlimatation
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -34,6 +39,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func cameraBtnPressed(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .camera
+        self.present(imagePicker, animated: true, completion: nil)
 
     }
     
