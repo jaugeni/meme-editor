@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
@@ -19,11 +19,58 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        topTextField.delegate = self
+        bottomTextField.delegate = self
+        
+        topTextField.defaultTextAttributes = memeTextAttributes
+        bottomTextField.defaultTextAttributes = memeTextAttributes
+        
+        topTextField.textAlignment = .center
+        bottomTextField.textAlignment = .center
+        
+        self.view.endEditing(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         cameraBtmOutlet.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
     }
+    
+    //MARK: TextField
+    
+    let memeTextAttributes: [String: Any] = [
+        NSStrokeColorAttributeName: UIColor.black,
+        NSForegroundColorAttributeName: UIColor.white,
+        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSStrokeWidthAttributeName: 3.0,
+    ]
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        if topTextField.isEditing {
+            if topTextField.text == "TOP" {
+                topTextField.text?.removeAll()
+            }
+        }
+        
+        if bottomTextField.isEditing {
+            if bottomTextField.text == "BOTTOM" {
+                bottomTextField.text?.removeAll()
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+
     
     //MARK: Photo/Camera library imlimatation
     
