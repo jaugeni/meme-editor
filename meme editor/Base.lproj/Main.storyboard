@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oyb-ZK-e0c">
-                                <rect key="frame" x="0.0" y="44" width="414" height="648"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGO-a0-zwy">
@@ -57,13 +57,13 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWL-OX-7U5">
-                                <rect key="frame" x="0.0" y="84" width="414" height="47"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="47"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iNt-5o-LxJ">
-                                <rect key="frame" x="0.0" y="605" width="414" height="47"/>
+                                <rect key="frame" x="0.0" y="641" width="414" height="47"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -71,19 +71,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="iNt-5o-LxJ" firstAttribute="bottom" secondItem="oyb-ZK-e0c" secondAttribute="bottom" constant="-40" id="26a-Qp-3RP"/>
+                            <constraint firstItem="iNt-5o-LxJ" firstAttribute="bottom" secondItem="oyb-ZK-e0c" secondAttribute="bottom" constant="-48" id="26a-Qp-3RP"/>
                             <constraint firstItem="iNt-5o-LxJ" firstAttribute="width" secondItem="oyb-ZK-e0c" secondAttribute="width" id="6fN-ZF-sCt"/>
-                            <constraint firstItem="dWL-OX-7U5" firstAttribute="top" secondItem="oyb-ZK-e0c" secondAttribute="top" constant="40" id="832-AE-gV1"/>
-                            <constraint firstItem="GZW-u8-1uH" firstAttribute="top" secondItem="oyb-ZK-e0c" secondAttribute="bottom" id="Aqf-Hb-F7J"/>
+                            <constraint firstItem="dWL-OX-7U5" firstAttribute="top" secondItem="oyb-ZK-e0c" secondAttribute="top" constant="48" id="832-AE-gV1"/>
                             <constraint firstAttribute="trailing" secondItem="ZGO-a0-zwy" secondAttribute="trailing" id="B61-MJ-1uA"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GZW-u8-1uH" secondAttribute="bottom" id="KBO-ni-4RG"/>
                             <constraint firstAttribute="trailing" secondItem="GZW-u8-1uH" secondAttribute="trailing" id="NsS-4g-UUx"/>
+                            <constraint firstItem="oyb-ZK-e0c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pgg-2t-tI4"/>
+                            <constraint firstAttribute="bottom" secondItem="oyb-ZK-e0c" secondAttribute="bottom" id="REv-8B-7Yf"/>
                             <constraint firstItem="dWL-OX-7U5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tci-Xa-PMe"/>
                             <constraint firstAttribute="trailing" secondItem="oyb-ZK-e0c" secondAttribute="trailing" id="hcP-lI-FAl"/>
                             <constraint firstItem="ZGO-a0-zwy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jVy-q0-BuF"/>
                             <constraint firstItem="ZGO-a0-zwy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pbd-BZ-cg0"/>
                             <constraint firstItem="oyb-ZK-e0c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qUl-mV-C5m"/>
-                            <constraint firstItem="oyb-ZK-e0c" firstAttribute="top" secondItem="ZGO-a0-zwy" secondAttribute="bottom" id="raR-8t-Wg5"/>
                             <constraint firstItem="GZW-u8-1uH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uvo-Rb-2zP"/>
                             <constraint firstItem="iNt-5o-LxJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y96-Lf-x1r"/>
                             <constraint firstItem="dWL-OX-7U5" firstAttribute="width" secondItem="oyb-ZK-e0c" secondAttribute="width" id="z7q-Vw-RSr"/>
@@ -102,6 +102,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.23188405797103" y="138.58695652173915"/>
+        </scene>
+        <!--HistoryVC-->
+        <scene sceneID="Aun-BT-Myw">
+            <objects>
+                <viewController id="sPb-nj-xTO" customClass="HistoryVC" customModule="meme_editor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qpS-UH-Lxk"/>
+                        <viewControllerLayoutGuide type="bottom" id="fIl-Ge-u4U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mxI-x8-TiV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="urV-ns-zVq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="145"/>
         </scene>
     </scenes>
 </document>
